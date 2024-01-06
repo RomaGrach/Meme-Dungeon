@@ -20,15 +20,16 @@ public class FootstepsSound : MonoBehaviour
     {
         if (GetComponent<FirstPersonController>().isWalking)
         {
-            float t = 0;
-            if (GetComponent<FirstPersonController>().isSprinting) t = timeBetweenSteps / 2;
-            else t = timeBetweenSteps;
-            if (Time.time - interval > t) {     
-            PlaySound();
-            interval = Time.time;
+            float t = timeBetweenSteps;
+            if (GetComponent<FirstPersonController>().isSprinting) t /= 2;
+            if (GetComponent<FirstPersonController>().isCrouched) t *= 2;
+            if (Time.time - interval > t)
+            {
+                PlaySound();
+                interval = Time.time;
             }
         }
-        
+
 
     }
     void PlaySound()
