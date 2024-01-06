@@ -22,9 +22,19 @@ public class EnemyVisionPRO : MonoBehaviour
     public bool isPatrolling;
     public float elapsedTimeSincePlayerLastSeen;
     public float angle = 0f;
+
+    private AudioSource audioSource;
+
+
+    public float maxDistanceAudio = 15f;
+
+    public float minDistanceAudio = 6f;
+
     // Start is called before the first frame update
     void Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+
         elapsedTimeSincePlayerLastSeen = timeToRememberPlayer;
         enemyAgent = GetComponent<NavMeshAgent>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -75,6 +85,10 @@ public class EnemyVisionPRO : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            isPlayerInSight = false;
+        }
 
         
 
@@ -90,6 +104,7 @@ public class EnemyVisionPRO : MonoBehaviour
                 // Если прошло достаточно времени после потери игрока, начать патрулирование
                 if (!isPatrolling)
                 {
+                    SetMaxDistance(minDistanceAudio);
                     isPatrolling = true;
                     Debug.Log("88");
                     StartCoroutine(LookAround());
@@ -105,6 +120,7 @@ public class EnemyVisionPRO : MonoBehaviour
         }
         else
         {
+            SetMaxDistance(maxDistanceAudio);
             // Если игрок в зоне видимости, двигаться к его позиции
             enemyAgent.destination = player.position;
         }
@@ -149,6 +165,25 @@ public class EnemyVisionPRO : MonoBehaviour
         }
 
         StartCoroutine(Patrol());
+    }
+
+    // Функция для установки максимальной дистанции звука
+    void SetMaxDistance(float maxDistanceValue)
+    {
+        // Получаем компонент Audio Source на текущем объекте
+        AudioSource audioSource = GetComponent<AudioSource>();
+
+        // Проверяем наличие компонента Audio Source
+        if (audioSource != null)
+        {
+            // Устанавливаем переданное значение в качестве максимальной дистанции звука
+            audioSource.maxDistance = maxDistanceValue;
+        }
+        else
+        {
+            // Если компонент Audio Source отсутствует, выводим сообщение об ошибке
+            Debug.LogError("Audio Source component is not found on this GameObject!");
+        }
     }
 
 }
