@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0433\u043E\u0442\u043E\u0432\u044B\u0435/l1.unity"
+    guid: 542594615962d40c6aab0ade4e06277c
+  - enabled: 1
+    path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0433\u043E\u0442\u043E\u0432\u044B\u0435/l2.unity"
+    guid: d1cbf939e206b45688e43ded8e7f5e74
+  - enabled: 1
+    path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0433\u043E\u0442\u043E\u0432\u044B\u0435/l3.unity"
+    guid: e97281467e04c4a0f8656c6da94eca8c
+  - enabled: 1
+    path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0433\u043E\u0442\u043E\u0432\u044B\u0435/l4.unity"
+    guid: 653e73f21b6074e528073d079056780e
+  - enabled: 1
+    path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0433\u043E\u0442\u043E\u0432\u044B\u0435/l5.unity"
+    guid: 360468dcef473470d96d6779d4a21995
   m_configObjects: {}
