@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0433\u043E\u0442\u043E\u0432\u044B\u0435/l1.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
