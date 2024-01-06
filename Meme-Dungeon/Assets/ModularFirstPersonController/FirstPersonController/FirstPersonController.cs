@@ -16,8 +16,8 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+    
     private Rigidbody rb;
-
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -60,7 +60,7 @@ public class FirstPersonController : MonoBehaviour
     public float maxVelocityChange = 10f;
 
     // Internal Variables
-    private bool isWalking = false;
+    public bool isWalking = false;
 
     #region Sprint
 
@@ -83,7 +83,7 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables
     private CanvasGroup sprintBarCG;
-    private bool isSprinting = false;
+    public bool isSprinting = false;
     private float sprintRemaining;
     private float sprintBarWidth;
     private float sprintBarHeight;
@@ -553,7 +553,6 @@ public class FirstPersonController : MonoBehaviour
         GUILayout.Label("By Jess Case", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Normal, fontSize = 12 });
         GUILayout.Label("version 1.0.1", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Normal, fontSize = 12 });
         EditorGUILayout.Space();
-
         #region Camera Setup
 
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);

@@ -14,6 +14,7 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetKeyDown(FlashLightKey))
         {
+            GetComponent<AudioSource>().Play();
             GetComponentInChildren<Light>().enabled = !GetComponentInChildren<Light>().enabled;
         }
     }
