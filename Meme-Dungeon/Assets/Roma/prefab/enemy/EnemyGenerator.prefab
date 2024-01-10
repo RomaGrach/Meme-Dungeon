@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn:
   - {fileID: 8293506256832901602, guid: 870c85ad6a8ed4e92a61ce53bb4cb203, type: 3}
+  - {fileID: 2216120271819603677, guid: 3b6e654e4903a4d21a01ff752e6af1a0, type: 3}
   spawnRadius: 100
   groundLayer:
     serializedVersion: 2
