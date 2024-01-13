@@ -23,11 +23,11 @@ public class AudioPoint : Sounds
     }
     private void OnTriggerEnter(Collider other)
     {
-        //if (NotPlay)
-        //{
+        if (other.tag == "Player")
+        {
             //NotPlay = false;
             PlaySound(nomberOfSound, volume, RandomSound, destroyed);
             Destroy(gameObject);
-        //}
+        }
     }
 }

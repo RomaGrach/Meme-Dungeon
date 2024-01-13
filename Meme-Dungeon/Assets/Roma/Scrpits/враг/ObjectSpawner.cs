@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
-
+using System.Collections;
 public class ObjectSpawner : MonoBehaviour
 {
     public GameObject[] objectToSpawn; // Префаб объекта, который вы хотите создать
@@ -25,7 +25,16 @@ public class ObjectSpawner : MonoBehaviour
 
     private void Start()
     {
-        for( float i = 0; i < CountOfSpawn; i++)
+        StartCoroutine(DelayedFunction());
+    }
+    IEnumerator DelayedFunction()
+    {
+        yield return new WaitForSeconds(0.1f);
+        YourFunctionToExecute();
+    }
+    void YourFunctionToExecute()
+    {
+        for (int i = 0; i < CountOfSpawn; i++)
         {
             SpawnObjectOnNavMesh();
         }

@@ -57,6 +57,7 @@ public class EnemyVisionPRO : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player"))
             {
+                Debug.Log("1");
                 isPatrolling = false;
                 isPlayerInSight = true;
                 //enemyAgent.destination = player.position;
@@ -74,6 +75,7 @@ public class EnemyVisionPRO : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Player"))
                 {
+                    Debug.Log("2");
                     isPatrolling = false;
                     isPlayerInSight = true;
                     //enemyAgent.destination = player.position;
@@ -100,13 +102,13 @@ public class EnemyVisionPRO : MonoBehaviour
             if (elapsedTimeSincePlayerLastSeen >= timeToRememberPlayer)
             {
                 
-                    Debug.Log("83");
+                    //Debug.Log("83");
                 // Если прошло достаточно времени после потери игрока, начать патрулирование
                 if (!isPatrolling)
                 {
                     SetMaxDistance(minDistanceAudio);
                     isPatrolling = true;
-                    Debug.Log("88");
+                    //Debug.Log("88");
                     StartCoroutine(LookAround());
                 }
             }
@@ -127,7 +129,7 @@ public class EnemyVisionPRO : MonoBehaviour
     }
     IEnumerator Patrol()
     {
-        Debug.Log("106");
+        //Debug.Log("106");
         isPatrolling = true;
         Vector3 randomPoint = Random.insideUnitSphere * visionDistance;
         NavMeshHit navHit;
@@ -140,10 +142,10 @@ public class EnemyVisionPRO : MonoBehaviour
 
         while (Vector3.Distance(transform.position, navHit.position) > DistanceToPoint)
         {
-            Debug.Log("117");
-            Debug.Log(Vector3.Distance(transform.position, navHit.position));
+            //Debug.Log("117");
+            //Debug.Log(Vector3.Distance(transform.position, navHit.position));
             yield return null;
-            Debug.Log("122");
+            //Debug.Log("122");
         }
         StartCoroutine(Patrol());
 
@@ -158,7 +160,7 @@ public class EnemyVisionPRO : MonoBehaviour
         angle = 0f;
         while (angle < 360f)
         {
-            Debug.Log("125");
+            //Debug.Log("125");
             transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
             angle += rotationSpeed * Time.deltaTime;
             yield return null;
