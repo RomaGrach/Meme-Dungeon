@@ -1,10 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: "Assets/Roma/\u0441\u0446\u0435\u043D\u044B/\u0442\u0435\u0441\u0442\u043E\u0432\u044B\u0435/l5
-    1.unity"
-=======
 - path: Assets/Scenes/menu.unity
->>>>>>> Evgeny
   isLoaded: 1
   isActive: 1
   isSubScene: 0
