@@ -869,11 +869,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2617266991594704787, guid: 1b0ebf603472c403f99785d6b70ccc18, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318544812607726505, guid: 1b0ebf603472c403f99785d6b70ccc18, type: 3}
+      propertyPath: countOfSpawn
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3318544812607726505, guid: 1b0ebf603472c403f99785d6b70ccc18, type: 3}
       propertyPath: minDistanceBetweenObjects
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9176273900514538103, guid: 1b0ebf603472c403f99785d6b70ccc18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -974,7 +978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8319918861889365151, guid: ebb780f636c5e45c28d059d0977c372f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1148,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8976999216511401780, guid: bf64369c513b34ea38501e26fc47e26e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
